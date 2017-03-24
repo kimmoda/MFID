@@ -1,11 +1,11 @@
 class FitsController < ApplicationController
+    before_action :set_fit, only: [:show, :edit, :update, :destroy]
 
     def index
         @fits = Fit.all
     end
     
     def show
-        @fit = Fit.find(params[:id])
     end
     
     def new
@@ -13,23 +13,31 @@ class FitsController < ApplicationController
     end
 
     def create
-        @fit = Fit.create(fit_params)
-        redirect_to fits_path
+        if @fit = Fit.create(fit_params)
+            flash[:success] = "Your fit has been created!"
+            redirect_to fits_path
+        else
+            flash.now[:alert] = "Error adding fit! Please check fields."
+            render :new
+        end
     end
 
     def edit
-        @fit = Fit.find(params[:id])
     end
 
     def update
-        @fit = Fit.find(params[:id])
-        @fit.update(fit_params)
-        redirect_to(fit_path(@fit))
+        if @fit.update(fit_params)
+            flash[:success] = "Fit updated."
+            redirect_to(fit_path(@fit))
+        else
+            flash.now[:alert] = "Error editing fit! Please check fields."
+            render :edit
+        end
     end
     
     def destroy
-        @fit = Fit.find(params[:id])
         @fit.destroy
+        flash[:success] = "Fit removed."
         redirect_to fits_path
     end
 
@@ -38,5 +46,8 @@ class FitsController < ApplicationController
     def fit_params
         params.require(:fit).permit(:image, :caption)
     end
-
+    
+    def set_fit
+        @fit = Fit.find(params[:id])
+    end
 end

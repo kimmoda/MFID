@@ -1,15 +1,5 @@
-.text-center
-  = image_tag @fit.image.url(:medium)
-.form-wrapper
-  = simple_form_for @fit, html: { class: 'form-horizontal', multipart: true } do |f|
-    .form-group
-      = f.input :image
-    .form-group.text-center
-      = f.input :caption
-    .form-group.text-center
-      = f.button :submit, class: 'btn-success'
-      
-    .text-center.edit-links
-      = link_to "DELETE", fit_path(@fit), method: :delete, data: { confirm: "Are you sure you want to delete this fit?" }
-      |
-      = link_to "CANCEL", fits_path
+= render 'form'
+.text-center.edit-links
+  = link_to "REMOVE", fit_path(@fit), method: :delete, data: { confirm: "Are you sure you want to permanently remove this fit?" }
+  |
+  = link_to "BACK", root_path

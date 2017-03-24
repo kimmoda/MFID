@@ -6,6 +6,10 @@ MYFITID - A fashion-focused WDYWT Social Media Platform.
 
 MYFITIDENTITY (MFID) is a fashion-focused What Did You Wear Today(WDYWT) Social Media Platform designed specifically for Stylists, Influencers and Brands to come togetether by sharing, promoting, discussing and identitying various fashion pieces. 
 
+# DEVLOG
+
+Cleaned up some code. 4,000 -> 1,400 (approx.)
+
 ## Built With
 
 * [Ruby-On-Rails](https://github.com/rails/rails) - Framework
