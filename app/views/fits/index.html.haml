@@ -1,1 +1,10 @@
-%p ID
+.fits-wrapper.row
+  -@fits.each do |fit|
+    .fit
+      .fit-head
+        .name
+          YUSKIX
+      .image.center-block
+        =link_to (image_tag fit.image.url(:medium), class:'img-responsive'), fit_path(fit)
+      %p.caption
+        =fit.caption

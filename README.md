@@ -16,7 +16,7 @@ MYFITIDENTITY (MFID) is a fashion-focused What Did You Wear Today(WDYWT) Social 
 
 * **Michael Saunders** - *Project Lead* - [YUSKIX](https://www.instagram.com/yuski.x/)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/thgilartlU/MFID/graphs/contributors) who participated in this project.
 
 ## License
 
