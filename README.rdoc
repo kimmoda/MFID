@@ -1,28 +1,29 @@
-== README
+# MYFITID
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MYFITID - A fashion-focused WDYWT Social Media Platform.
 
-Things you may want to cover:
+## What is MFID?
 
-* Ruby version
+MYFITIDENTITY (MFID) is a fashion-focused What Did You Wear Today(WDYWT) Social Media Platform designed specifically for Stylists, Influencers and Brands to come togetether by sharing, promoting, discussing and identitying various fashion outfits. 
 
-* System dependencies
+## Built With
 
-* Configuration
+* [Ruby-On-Rails](https://github.com/rails/rails) - Framework
+* [HAML](https://github.com/haml/haml) - Markup Language
+* [Cloud9](https://c9.io/myulb) - Development Environment (IDE)
 
-* Database creation
+## Authors
 
-* Database initialization
+* **Michael Saunders** - *Project Lead* - [YUSKX](https://www.instagram.com/yuski.x/)
 
-* How to run the test suite
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-* Services (job queues, cache servers, search engines, etc.)
+## License
 
-* Deployment instructions
+This project is licensed under the KONOMARK License - see [KONOMARK](http://www.konomark.org/) or the [LICENSE.md](LICENSE.md) file for details
 
-* ...
+## Shoutouts
 
+* Cashman & Ant - Thanks for showing genuine interest, I appreciate it.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+(http://www.konomark.org/konomarks/konomark_logo_full.png)

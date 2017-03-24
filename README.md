@@ -1,24 +1,27 @@
+# MYFITID
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+MYFITID - A fashion-focused WDYWT Social Media Platform.
 
+## What is MFID?
 
-Welcome to your Rails project on Cloud9 IDE!
+MYFITIDENTITY (MFID) is a fashion-focused What Did You Wear Today(WDYWT) Social Media Platform designed specifically for Stylists, Influencers and Brands to come togetether by sharing, promoting, discussing and identitying various fashion outfits. 
 
-To get started, just do the following:
+## Built With
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://mfid-myulb.c9users.io/).
+* [Ruby-On-Rails](https://github.com/rails/rails) - Framework
+* [HAML](https://github.com/haml/haml) - Markup Language
+* [Cloud9](https://c9.io/myulb) - Development Environment (IDE)
 
-Happy coding!
-The Cloud9 IDE team
+## Authors
 
+* **Michael Saunders** - *Project Lead* - [YUSKX](https://www.instagram.com/yuski.x/)
 
-## Support & Documentation
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+## License
+
+This project is licensed under the KONOMARK License - see [KONOMARK](http://www.konomark.org/) or the [LICENSE.md](LICENSE.md) file for details
+
+## Shoutouts
+
+* Cashman & Ant - Thanks for showing genuine interest, I appreciate it.
