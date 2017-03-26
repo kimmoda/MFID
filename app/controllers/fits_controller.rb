@@ -15,7 +15,9 @@ class FitsController < ApplicationController
     end
 
     def create
-        if @fit = current_user.fits.build(fit_params)
+        @fit = current_user.fits.build(fit_params)
+        
+        if @fit.save
             flash[:success] = "Your fit has been created!"
             redirect_to fits_path
         else
