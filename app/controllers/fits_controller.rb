@@ -1,5 +1,6 @@
 class FitsController < ApplicationController
     before_action :authenticate_user!
+    before_action :owned_fit, only: [:edit, :update, :destroy]
     before_action :set_fit, only: [:show, :edit, :update, :destroy]
 
     def index
@@ -44,11 +45,19 @@ class FitsController < ApplicationController
 
     private
     
-    def fit_params
-        params.require(:fit).permit(:image, :caption)
+    def owned_fit
+        unless current_user == @fit.user
+            flash[:alert] = "That fit doesn't belong to you!"
+            redirect_to root_path
+        end
     end
     
     def set_fit
         @fit = Fit.find(params[:id])
     end
+    
+    def fit_params
+        params.require(:fit).permit(:image, :caption)
+    end
+    
 end

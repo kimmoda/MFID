@@ -8,6 +8,11 @@
     %p.caption
       =@fit.caption
     .text-center.edit-links
-      = link_to "BACK", fits_path
-      |
-      = link_to "EDIT", edit_fit_path(@fit)
+      - if @fit.user.id == current_user.id
+        .text-center.edit-links
+          = link_to "BACK", fits_path
+          |
+          = link_to "EDIT", edit_fit_path(@fit)
+      - else
+        .text-center.edit-links
+          =link_to "BACK", fits_path
