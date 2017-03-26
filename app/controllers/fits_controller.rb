@@ -1,4 +1,5 @@
 class FitsController < ApplicationController
+    before_action :authenticate_user!
     before_action :set_fit, only: [:show, :edit, :update, :destroy]
 
     def index

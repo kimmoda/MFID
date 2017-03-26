@@ -5,12 +5,16 @@
         %span.sr-only Toggle Navigation
         %span.icon-bar
         %span.icon-bar
-      .navbar-brand= link_to "ID", root_path
+      .navbar-brand= link_to image_tag('Logo_Box64.png'), root_path
     .collapse.navbar-collapse#bs-navbar-collapse-1
       %ul.nav.navbar-nav.navbar-right
-        %li
-          = link_to "SUBMIT FIT", new_fit_path
-        %li
-          = link_to "LOGIN", '#'
-        %li
-          = link_to "JOIN", '#'
+        - if user_signed_in?
+          %li
+            = link_to "SUBMIT", new_fit_path
+          %li
+            = link_to "LOGOUT", destroy_user_session_path, method: :delete
+        - else
+          %li
+            = link_to "LOGIN", new_user_session_path
+          %li
+            = link_to "JOIN", new_user_registration_path

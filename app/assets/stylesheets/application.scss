@@ -7,6 +7,12 @@ body {
 }
 
 .navbar-brand {
+  img {
+    width: auto;
+    height: auto;
+    max-width: 35px;
+    max-height: 35px;
+  }
   a {
     color: #125688;
   }
