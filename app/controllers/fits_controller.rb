@@ -1,10 +1,10 @@
 class FitsController < ApplicationController
     before_action :authenticate_user!
-    before_action :owned_fit, only: [:edit, :update, :destroy]
     before_action :set_fit, only: [:show, :edit, :update, :destroy]
+    before_action :owned_fit, only: [:edit, :update, :destroy]
 
     def index
-        @fits = Fit.all
+        @fits = Fit.all.order('created_at DESC')
     end
     
     def show
@@ -21,7 +21,7 @@ class FitsController < ApplicationController
             flash[:success] = "Your fit has been created!"
             redirect_to fits_path
         else
-            flash.now[:alert] = "Error adding fit! Please check fields."
+            flash[:alert] = "Error adding fit! Please check fields."
             render :new
         end
     end

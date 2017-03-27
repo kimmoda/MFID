@@ -1,5 +1,5 @@
 = render 'form'
 .text-center.edit-links
-  = link_to "REMOVE", fit_path(@fit), method: :delete, data: { confirm: "Are you sure you want to permanently remove this fit?" }
+  = link_to "Remove", fit_path(@fit), method: :delete, data: { confirm: "Are you sure you want to permanently remove this fit?" }
   |
-  = link_to "BACK", root_path
+  = link_to "Back", root_path

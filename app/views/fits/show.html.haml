@@ -1,18 +1,9 @@
-.fits-wrapper.row
-  .fit
-    .fit-head
-      .name
-        = @fit.user.user_name
-    .image.center-block
-      =image_tag @fit.image.url(:medium)
-    %p.caption
-      =@fit.caption
-    .text-center.edit-links
-      - if @fit.user.id == current_user.id
-        .text-center.edit-links
-          = link_to "BACK", fits_path
-          |
-          = link_to "EDIT", edit_fit_path(@fit)
-      - else
-        .text-center.edit-links
-          =link_to "BACK", fits_path
+= render 'fit', fit: @fit
+- if @fit.user.id == current_user.id
+  .text-center.edit-links
+    = link_to "Back", fits_path
+    |
+    = link_to "Edit", edit_fit_path(@fit)
+- else
+  .text-center.edit-links
+    =link_to "Back", fits_path
