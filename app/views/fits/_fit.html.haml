@@ -1,0 +1,26 @@
+.fits-wrapper
+  .fit
+    .fit-head
+      .thumb-img
+      .user-name
+        =link_to fit.user.user_name
+      .time-ago
+        =time_ago_in_words fit.created_at
+    .image.center-block
+      =link_to (image_tag fit.image.url(:medium), class:'img-responsive'),
+                 fit_path(fit)
+    .fit-bottom
+      .caption
+        .caption-content
+          .user-name
+            =link_to fit.user.user_name
+          =fit.caption
+          .comments{id: "comments_#{fit.id}"}
+            -if fit.comments
+              = render fit.comments, fit: fit
+    .comment-like-form.row
+      .like-button.col-sm-1
+        %span(class="glyphicon glyphicon-heart-empty")
+      .comment-form.col-sm-11
+        = form_for([fit, fit.comments.build], remote: true) do |f|
+          = f.text_field :content, placeholder: 'Something to say?', class: "comment_content", id: "comment_content_#{fit.id}"
